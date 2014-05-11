@@ -25,16 +25,16 @@ Sys.setlocale("LC_TIME", "en_US.UTF-8")
 plot(newdataset$CompleteDate, newdataset$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
 
 #plot2
-plot(newdataset$CompleteDate, newdataset$Voltage, type = "l", xlab = "", ylab = "Voltage")
+plot(newdataset$CompleteDate, newdataset$Voltage, type = "l", xlab = "datetime", ylab = "Voltage")
 
 #Plot3
 plot(newdataset$CompleteDate, newdataset$Sub_metering_1, type = "l", xlab = "", ylab = "Energy Sub metering")
 lines(newdataset$CompleteDate, newdataset$Sub_metering_2, type = "l", col="red")
 lines(newdataset$CompleteDate, newdataset$Sub_metering_3, type = "l", col="blue")
-legend('topright', c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),pch=1,col=c('black','red','blue'));
+legend('topright', c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),pch=1,col=c('black','red','blue'),border=FALSE);
 
 #plot4
-plot(newdataset$CompleteDate, newdataset$Global_reactive_power, type = "l", xlab = "", ylab = "Global_reactive_power")
+plot(newdataset$CompleteDate, newdataset$Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global_reactive_power")
 
 
 #Save Filede
