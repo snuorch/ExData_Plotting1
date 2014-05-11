@@ -31,12 +31,12 @@ plot(newdataset$CompleteDate, newdataset$Voltage, type = "l", xlab = "", ylab = 
 plot(newdataset$CompleteDate, newdataset$Sub_metering_1, type = "l", xlab = "", ylab = "Energy Sub metering")
 lines(newdataset$CompleteDate, newdataset$Sub_metering_2, type = "l", col="red")
 lines(newdataset$CompleteDate, newdataset$Sub_metering_3, type = "l", col="blue")
+legend('topright', c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),pch=1,col=c('black','red','blue'));
 
 #plot4
-plot(newdataset$CompleteDate, newdataset$Global_active_power, type = "l")
+plot(newdataset$CompleteDate, newdataset$Global_reactive_power, type = "l", xlab = "", ylab = "Global_reactive_power")
 
 
-legend('topright', c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),col=c('black','red','blue'));
 #Save Filede
 dev.copy(png, file = "plot4.png")
 
